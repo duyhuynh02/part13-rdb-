@@ -1,0 +1,17 @@
+/*
+  id (unique, incrementing id)
+  author (string)
+  url (string that cannot be empty)
+  title (string that cannot be empty)
+  likes (integer with default value zero)
+*/
+CREATE TABLE blogs(
+  id SERIAL PRIMARY KEY, 
+  author text,
+  url text NOT NULL, 
+  title text NOT NULL, 
+  likes integer default 0
+);
+
+INSERT INTO blogs (author, url, title) values ('todsacerdoti', 'https://sqlite.org/draft/whybytecode.html', 'Why SQLite Uses ByteCode');
+INSERT INTO blogs (author, url, title) values ('ubolonton_', 'https://typespec.io/blog/2024-04-25-introducing', 'Introducing TypeSpec: A New Language for API-Centric Development');
