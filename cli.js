@@ -1,20 +1,74 @@
 require('dotenv').config()
-const { Sequelize, QueryTypes } = require('sequelize')
+const { Sequelize, Model, DataTypes } = require('sequelize')
+const express = require('express')
+const app = express()
+app.use(express.json())
 
 const sequelize = new Sequelize(process.env.DATABASE_URL)
 
-const main = async () => {
-  try {
-    await sequelize.authenticate()
-    const blogs = await sequelize.query("SELECT * FROM blogs", { type: QueryTypes.SELECT })
-    //to follow the format, will delete later ;) 
-    blogs.forEach(blog => {
-      console.log(`${blog.author}: ${blog.title}, ${blog.likes} likes`);
-    })
-    sequelize.close()
-  } catch (error) {
-    console.error('Unable to connect to the database:', error)
-  }
-}
+class Blog extends Model {}
 
-main()
+Blog.init({
+  id: {
+    type: DataTypes.INTEGER, 
+    primaryKey: true, 
+    autoIncrement: true 
+  }, 
+  author: {
+    type: DataTypes.TEXT,
+  },
+  url: {
+    type: DataTypes.TEXT, 
+    allowNull: false
+  }, 
+  title: {
+    type: DataTypes.TEXT, 
+    allowNull: false 
+  },
+  likes: {
+    type: DataTypes.INTEGER,
+    defaultValue: 0
+  }
+}, {
+  sequelize, 
+  underscored: true, 
+  timestamps: false, 
+  modelName: 'blog'
+})
+
+
+//In case there is no record in the db, it will automatically create new one 
+Blog.sync()
+
+// GET all the blogs 
+app.get('/api/blogs', async (req, res) => {
+  const blogs = await Blog.findAll()
+  res.json(blogs)
+})
+
+//POST a new blog 
+app.post('/api/blogs', async (req, res) => {
+  try {
+    const blog = await Blog.create(req.body)
+    res.json(blog)
+  } catch(error) {
+    res.status(400).json({ error })
+  }
+})
+
+//DELETE a new blog 
+app.delete('/api/blogs/:id', async (req, res) => {
+  const deletedBlog = await Blog.findByPk(req.params.id)
+  if (deletedBlog) {
+    await deletedBlog.destroy()
+    res.status(202).json({ message: 'Delete ok.'})
+  } else {
+    res.status(404).json({ message: 'Blog cannot be deleted.'})
+  }
+})
+
+const PORT = process.env.PORT || 3001 
+app.listen(PORT, () => {
+  console.log(`Server running on PORT ${PORT}`)
+})
+
