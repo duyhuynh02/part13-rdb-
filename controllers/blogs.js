@@ -10,12 +10,8 @@ router.get('/', async (req, res) => {
 
 //POST a new blog 
 router.post('/', async (req, res) => {
-  try {
-    const blog = await Blog.create(req.body)
-    res.json(blog)
-  } catch(error) {
-    res.status(400).json({ error })
-  }
+  const blog = await Blog.create(req.body)
+  res.status(201).json(blog)
 })
 
 const blogFinder = async (req, res, next) => {
@@ -28,7 +24,7 @@ router.put('/:id', blogFinder, async (req, res) => {
     if (req.blog) {
         req.blog.likes = req.body.likes 
         await req.blog.save()
-        res.json(req.blog)
+        res.status(201).json(req.blog)
     } else {
         res.status(404).end()
     }
