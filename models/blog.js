@@ -26,11 +26,10 @@ Blog.init({
     defaultValue: 0
   }
 }, {
-  sequelize, 
-  underscored: true, 
-  timestamps: false, 
+  sequelize,           
+  underscored: true,    //use snake_case rather than camelCase
+  timestamps: false,   
   modelName: 'blog'
 })
-
 
 module.exports = Blog 
