@@ -10,8 +10,18 @@ router.get('/', async (req, res) => {
 
 //POST user 
 router.post('/', async (req, res) => {
-    const user = await User.create(req.body)
-    res.status(201).json(user)
+    //try to use try-catch block again for exercise 13.9, feel free to correct me
+    try { 
+        const user = await User.create(req.body)
+        res.status(201).json(user)
+    } catch (error) {
+        if (error.name === "SequelizeValidationError") {
+            res.status(404).json("Validation isEmail on username failed")
+        } else {
+            res.status(404).json('Other error:', error);
+        }
+    }
+
 })
 
 // Middleware for finding the right user

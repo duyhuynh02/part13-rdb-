@@ -16,12 +16,20 @@ User.init({
     }, 
     username: {
         type: DataTypes.TEXT, 
-        allowNull: false
+        allowNull: false,
+        unique: true,
     },
     password: {
         type: DataTypes.TEXT, 
         defaultValue: 'password',
     },
+    email: {
+        type: DataTypes.TEXT, 
+        allowNull: false,
+        validate: {
+            isEmail: true,
+        }
+    }
 }, {
     sequelize, 
     underscored: true, 
