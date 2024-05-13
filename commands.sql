@@ -18,8 +18,31 @@ INSERT INTO blogs (author, url, title) values ('ubolonton_', 'https://typespec.i
 
 -- For POSTMAN
 {
-        "author": "markostamcar",
-        "url": "https://www.racunalniski-muzej.si/en40-years-later-a-game-for-the-zx-spectrum-will-be-once-again-broadcast-over-fm-radio/",
-        "title": "40 years later, a game for the ZX Spectrum will be again broadcast over FM radio",
-        "likes": 116
+  "author": "markostamcar",
+  "url": "https://www.racunalniski-muzej.si/en40-years-later-a-game-for-the-zx-spectrum-will-be-once-again-broadcast-over-fm-radio/",
+  "title": "40 years later, a game for the ZX Spectrum will be again broadcast over FM radio",
+  "likes": 116
+}
+
+{
+  "author": "pavel_lishin",
+  "url": "https://blog.plover.com/tech/its-an-age-of-marvels.html/",
+  "title": "It's an Age of Marvels ",
+  "likes": 35
+    //   "username": "duyhuynh",
+    //   "password": "password"
+
+}
+
+-- user POSTMAN
+{
+  "username": "duyhuynh",
+  "name": "Duy Huynh 01",
+  "email": "duyhuynh01@gmail.com",
+}
+
+-- TO Login 
+{
+  "username": "duyhuynh",
+  "password": "password"
 }
