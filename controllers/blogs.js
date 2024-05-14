@@ -7,23 +7,28 @@ const { SECRET } = require('../util/config')
 
 // GET all the blogs 
 router.get('/', async (req, res) => {
-  const where = {}
+  try {
+    const where = req.query.search ? {
+      [Op.or]: [
+        { title: { [Op.iLike]: `%${req.query.search}%` }}, 
+        { author: { [Op.iLike]: `%${req.query.search}%` }}, 
+      ]
+    } : {}
 
-  if (req.query.search) {
-    where.title = {
-      [Op.iLike]: `%${req.query.search}%` 
-    }
+    const blogs = await Blog.findAll({
+      attributes: { exclude: ['userId'] },
+      include: {
+        model: User, 
+        attributes: ['name']
+      },
+      where
+    });
+    res.json(blogs); 
+  } catch (error) {
+      console.log(error)  //debugging purpose
+      res.status(500).json({ error: 'An error occurred while fetching'})
   }
 
-  const blogs = await Blog.findAll({
-    attributes: { exclude: ['userId'] },
-    include: {
-      model: User, 
-      attributes: ['name']
-    },
-    where 
-  })
-  res.json(blogs)
 })
 
 //Login user 

@@ -29,9 +29,6 @@ INSERT INTO blogs (author, url, title) values ('ubolonton_', 'https://typespec.i
   "url": "https://blog.plover.com/tech/its-an-age-of-marvels.html/",
   "title": "It's an Age of Marvels ",
   "likes": 35
-    //   "username": "duyhuynh",
-    //   "password": "password"
-
 }
 
 -- user POSTMAN
