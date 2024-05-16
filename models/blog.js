@@ -28,7 +28,7 @@ Blog.init({
 }, {
   sequelize,           
   underscored: true,    //use snake_case rather than camelCase
-  timestamps: false,   
+  timestamps: true,   
   modelName: 'blog'
 })
 
