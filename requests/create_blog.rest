@@ -1,0 +1,47 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNTg1MDMxN30.zyJq0pRKmd3KEAAD1-4uhyUm1EogQX6wlWDARAUyU2g
+
+{
+  "author": "markostamcar",
+  "url": "https://www.racunalniski-muzej.si/en40-years-later-a-game-for-the-zx-spectrum-will-be-once-again-broadcast-over-fm-radio/",
+  "title": "40 years later, a game for the ZX Spectrum will be again broadcast over FM radio",
+  "likes": 116,
+}
+
+###
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNTg1MDMxN30.zyJq0pRKmd3KEAAD1-4uhyUm1EogQX6wlWDARAUyU2g
+
+{
+  "author": "pavel_lishin",
+  "url": "https://blog.plover.com/tech/its-an-age-of-marvels.html/",
+  "title": "It's an Age of Marvels ",
+  "likes": 35
+}
+
+###
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNTg1MDMxN30.zyJq0pRKmd3KEAAD1-4uhyUm1EogQX6wlWDARAUyU2g
+
+{
+  "author": "todsacerdoti",
+  "url": "https://sqlite.org/draft/whybytecode.html",
+  "title": "Why SQLite Uses ByteCode",
+  "likes": 100
+}
+
+###
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNTg1MDMxN30.zyJq0pRKmd3KEAAD1-4uhyUm1EogQX6wlWDARAUyU2g
+
+{
+  "author": "ubolonton_",
+  "url": "https://typespec.io/blog/2024-04-25-introducing",
+  "title": "Introducing TypeSpec: A New Language for API-Centric Development",
+  "likes": 90,
+  "year_written": 2024
+}

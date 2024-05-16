@@ -24,7 +24,14 @@ Blog.init({
   likes: {
     type: DataTypes.INTEGER,
     defaultValue: 0
-  }
+  },
+  year_written: {
+    type: DataTypes.INTEGER, 
+    validate: {
+        max: 2024,
+        min: 1991
+    }
+  },
 }, {
   sequelize,           
   underscored: true,    //use snake_case rather than camelCase

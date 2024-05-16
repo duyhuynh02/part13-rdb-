@@ -31,6 +31,13 @@ module.exports = {
                 type: DataTypes.DATE,
                 defaultValue: DataTypes.NOW
             },
+            year_written: {
+                type: DataTypes.INTEGER, 
+                validate: {
+                    max: 2024, //I prefer data types as date.
+                    min: 1991
+                }
+            }
         })
 
         await queryInterface.createTable('users', {
