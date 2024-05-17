@@ -1,18 +1,18 @@
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNTg1MDMxN30.zyJq0pRKmd3KEAAD1-4uhyUm1EogQX6wlWDARAUyU2g
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNTkxOTE2NX0.kzgWGhFKhy4Cs6Rx8G6sLsQ58sPVyUAJvPPDJ99G5ro
 
 {
   "author": "markostamcar",
   "url": "https://www.racunalniski-muzej.si/en40-years-later-a-game-for-the-zx-spectrum-will-be-once-again-broadcast-over-fm-radio/",
   "title": "40 years later, a game for the ZX Spectrum will be again broadcast over FM radio",
-  "likes": 116,
+  "likes": 116
 }
 
 ###
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNTg1MDMxN30.zyJq0pRKmd3KEAAD1-4uhyUm1EogQX6wlWDARAUyU2g
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNTkxOTE2NX0.kzgWGhFKhy4Cs6Rx8G6sLsQ58sPVyUAJvPPDJ99G5ro
 
 {
   "author": "pavel_lishin",
@@ -24,7 +24,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1e
 ###
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNTg1MDMxN30.zyJq0pRKmd3KEAAD1-4uhyUm1EogQX6wlWDARAUyU2g
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNTkxOTE2NX0.kzgWGhFKhy4Cs6Rx8G6sLsQ58sPVyUAJvPPDJ99G5ro
 
 {
   "author": "todsacerdoti",
@@ -36,7 +36,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1e
 ###
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNTg1MDMxN30.zyJq0pRKmd3KEAAD1-4uhyUm1EogQX6wlWDARAUyU2g
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNTkxOTE2NX0.kzgWGhFKhy4Cs6Rx8G6sLsQ58sPVyUAJvPPDJ99G5ro
 
 {
   "author": "ubolonton_",
