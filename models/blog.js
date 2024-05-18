@@ -25,7 +25,7 @@ Blog.init({
     type: DataTypes.INTEGER,
     defaultValue: 0
   },
-  year_written: {
+  yearWritten: {
     type: DataTypes.INTEGER, 
     validate: {
         max: 2024,

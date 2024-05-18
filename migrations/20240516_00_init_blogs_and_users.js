@@ -31,7 +31,7 @@ module.exports = {
                 type: DataTypes.DATE,
                 defaultValue: DataTypes.NOW
             },
-            year_written: {
+            yearWritten: {
                 type: DataTypes.INTEGER, 
                 validate: {
                     max: 2024, //I prefer data types as date.
@@ -74,12 +74,6 @@ module.exports = {
                 type: DataTypes.DATE, 
                 defaultValue: DataTypes.NOW
             }
-        })
-
-        await queryInterface.addColumn('blogs', 'user_id', {
-            type: DataTypes.INTEGER, 
-            allowNull: false, 
-            references: { model: 'users', key: 'id' }, 
         })
     }, 
     down: async ({ context: queryInterface }) => {

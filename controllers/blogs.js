@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 const router = require('express').Router()
 const { Op } = require('sequelize')
 
-const { Blog, User } = require('../models')
+const { Blog, User, ReadingList } = require('../models')
 const { SECRET } = require('../util/config')
 
 // GET all the blogs 
@@ -17,10 +17,12 @@ router.get('/', async (req, res) => {
 
     const blogs = await Blog.findAll({
       attributes: { exclude: ['userId'] },
-      include: {
-        model: User, 
-        attributes: ['name']
-      },
+      include: [
+        {
+          model: User, 
+          attributes: ['name']
+        },
+      ],
       where,
       order: [
         ['likes', 'DESC']
