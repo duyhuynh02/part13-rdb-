@@ -29,7 +29,12 @@ User.init({
         validate: {
             isEmail: true,
         }
-    }
+    },
+    active: {
+        type: DataTypes.BOOLEAN, 
+        allowNull: false, 
+        defaultValue: false
+    }, 
 }, {
     sequelize, 
     timestamps: true, 
