@@ -13,8 +13,14 @@ CREATE TABLE blogs(
   likes integer default 0
 );
 
-INSERT INTO blogs (author, url, title) values ('todsacerdoti', 'https://sqlite.org/draft/whybytecode.html', 'Why SQLite Uses ByteCode');
-INSERT INTO blogs (author, url, title) values ('ubolonton_', 'https://typespec.io/blog/2024-04-25-introducing', 'Introducing TypeSpec: A New Language for API-Centric Development');
+INSERT INTO blogs (author, url, title) values ('todsacerdoti', 
+        'https://sqlite.org/draft/whybytecode.html', 
+        'Why SQLite Uses ByteCode',
+        );
+INSERT INTO blogs (author, url, title) values (
+  'ubolonton_', 
+  'https://typespec.io/blog/2024-04-25-introducing', 
+  'Introducing TypeSpec: A New Language for API-Centric Development');
 
 -- For POSTMAN
 {
