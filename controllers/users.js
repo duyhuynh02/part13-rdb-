@@ -32,9 +32,9 @@ router.get('/:id', async (req, res) => {
         include: {
             model: Blog, 
             as: 'readings',
-            attributes: ['id', 'title', 'author', 'url', 'likes', 'yearWritten'],
+            attributes: ['id', 'title', 'author', 'url', 'likes', 'year'],
             through: {
-                attributes: []
+                attributes: ['read', 'id']
             }
         }
     }) 

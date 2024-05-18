@@ -31,7 +31,7 @@ module.exports = {
                 type: DataTypes.DATE,
                 defaultValue: DataTypes.NOW
             },
-            yearWritten: {
+            year: {
                 type: DataTypes.INTEGER, 
                 validate: {
                     max: 2024, //I prefer data types as date.
