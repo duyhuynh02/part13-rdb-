@@ -7,10 +7,43 @@ router.get('/', async (req, res) => {
     const users = await User.findAll({
         include: {
             model: Blog, 
+            as: 'readings',
             attributes: ['title', 'author']
         }
     })
     res.json(users)
+})
+
+// Middleware for finding the right user
+const userFinder = async (req, res, next) => {
+    req.user = await User.findOne({
+        where: {
+            username: req.params.username,
+        }
+    })
+
+    next();
+}
+
+//GET specific user 
+router.get('/:id', async (req, res) => {
+    const user = await User.findByPk(req.params.id, {
+        attributes: ['name', 'username'],
+        include: {
+            model: Blog, 
+            as: 'readings',
+            attributes: ['id', 'title', 'author', 'url', 'likes', 'yearWritten'],
+            through: {
+                attributes: []
+            }
+        }
+    }) 
+
+    if (user) {
+        res.status(201).json(user)
+    } else {
+        res.status(404).end()
+    }
 })
 
 //POST user 
@@ -29,16 +62,6 @@ router.post('/', async (req, res) => {
 
 })
 
-// Middleware for finding the right user
-const userFinder = async (req, res, next) => {
-    req.user = await User.findOne({
-        where: {
-            username: req.params.username,
-        }
-    })
-
-    next();
-}
 
 //PUT user 
 router.put('/:username', userFinder, async (req, res) => {
