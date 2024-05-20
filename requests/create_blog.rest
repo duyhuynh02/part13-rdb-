@@ -1,6 +1,6 @@
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNjAwNjAzMH0.cJXbJDQPhvsVVryfJOd-8HE337rhYRGk24jyBB4Dh0w
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNjA0MTYzNH0.rpYBaqHabty3Gtmmq0zwNj46G7OG6gciA94BwxXFl2U
 
 {
   "author": "markostamcar",
@@ -12,7 +12,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1e
 ###
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNjAwNjAzMH0.cJXbJDQPhvsVVryfJOd-8HE337rhYRGk24jyBB4Dh0w
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNjA0MTYzNH0.rpYBaqHabty3Gtmmq0zwNj46G7OG6gciA94BwxXFl2U
 
 {
   "author": "pavel_lishin",
@@ -24,7 +24,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1e
 ###
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNjAwNjAzMH0.cJXbJDQPhvsVVryfJOd-8HE337rhYRGk24jyBB4Dh0w
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNjA0MTYzNH0.rpYBaqHabty3Gtmmq0zwNj46G7OG6gciA94BwxXFl2U
 
 {
   "author": "todsacerdoti",
@@ -36,12 +36,25 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1e
 ###
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNjAwNjAzMH0.cJXbJDQPhvsVVryfJOd-8HE337rhYRGk24jyBB4Dh0w
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNjA0MTYzNH0.rpYBaqHabty3Gtmmq0zwNj46G7OG6gciA94BwxXFl2U
 
 {
   "author": "ubolonton_",
   "url": "https://typespec.io/blog/2024-04-25-introducing",
   "title": "Introducing TypeSpec: A New Language for API-Centric Development",
   "likes": 90,
+  "year": 2024
+}
+
+###
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImR1eWh1eW5oIiwiaWQiOjEsImlhdCI6MTcxNjA0MTYzNH0.rpYBaqHabty3Gtmmq0zwNj46G7OG6gciA94BwxXFl2U
+
+{
+  "author": "Josely ",
+  "url": "https://www.anthropic.com/news/reflections-on-our-responsible-scaling-policy",
+  "title": "Reflections on our Responsible Scaling Policy",
+  "likes": 67,
   "year": 2024
 }

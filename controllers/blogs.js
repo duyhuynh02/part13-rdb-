@@ -56,8 +56,13 @@ const tokenExtractor = (req, res, next) => {
 router.post('/', tokenExtractor, async (req, res) => {
   try {
     const user = await User.findByPk(req.decodedToken.id)
-    const blog = await Blog.create({...req.body, userId: user.dataValues.id })
-    res.status(201).json(blog)
+    //13.24, the same applied for PUT. 
+    if (user.active === true) { 
+      const blog = await Blog.create({...req.body, userId: user.dataValues.id })
+      res.status(201).json(blog)
+    } else {
+      res.status(400).json({ 'error': "This user is not active now."})
+    }
   } catch (error) {
     return res.status(400).json({ error })
   }

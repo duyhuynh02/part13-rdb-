@@ -6,3 +6,13 @@ Content-Type: application/json
   "name": "Duy Huynh",
   "email": "duyhuynh02@gmail.com"
 }
+
+###
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+  "username": "duyhuynh03",
+  "name": "Duy Huynh 03",
+  "email": "duyhuynh03@gmail.com"
+}
